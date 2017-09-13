@@ -11,14 +11,14 @@ if (process.env.NODE_ENV === 'production') {
 
 export default function Html({ headComponents, body, postBodyComponents }) {
 	let css;
-    if (process.env.NODE_ENV === 'production') {
+	if (process.env.NODE_ENV === 'production') {
 		css = (
 			<style
 				id="gatsby-inlined-css"
 				dangerouslySetInnerHTML={{ __html: stylesStr }}
 			/>
 		);
-    }
+	}
 
 	return (
 		<html lang="en">
@@ -35,4 +35,4 @@ export default function Html({ headComponents, body, postBodyComponents }) {
 			</body>
 		</html>
 	);
-};
+}
